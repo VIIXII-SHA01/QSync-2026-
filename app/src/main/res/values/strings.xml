@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">QSync</string>
+    <string name="q_letter">QS</string>
+    <string name="sync_text">ync</string>
+    <string name="app_description">Join virtual queues instantly.\nGet notified when it\'s your turn.\nNo more standing in line.</string>
+    <string name="create_account">Create Account</string>
+    <string name="or_text">or</string>
+    <string name="sign_in">Sign In</string>
+    <string name="logo_description">QSync Logo</string>
+
+    <!-- Login Page Strings -->
+    <string name="welcome_text">Welcome</string>
+    <string name="back_to_text">"back to "</string>
+    <string name="login_subtitle">Your spot in line, always secured.</string>
+    <string name="email_label">EMAIL</string>
+    <string name="password_label">PASSWORD</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_account">"Don\'t have an account? "</string>
+    <string name="sign_up_free">Sign up free</string>
+
+    <!-- Registration Page Strings -->
+    <string name="registration">Registration</string>
+    <string name="create_your">"Create your "</string>
+    <string name="account_title">Account</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email_hint_reg">Email</string>
+    <string name="phone_hint">Phone</string>
+    <string name="gender_hint">Gender</string>
+    <string name="password_hint_reg">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="agree_text">"I agree the "</string>
+    <string name="terms_service">"Terms of Service "</string>
+    <string name="and_text"> and </string>
+    <string name="privacy_policy">" Privacy Policy "</string>
+</resources>
