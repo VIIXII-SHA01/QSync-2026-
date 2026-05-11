@@ -50,4 +50,7 @@
     <!-- Kiosk Strings -->
     <string name="create_kiosk">+ Create Kiosk</string>
     <string name="kiosk_empty_state_text">You can create your own kiosk or join one if an host will add you to their kiosk</string>
+
+    <!-- Find Kiosk Strings -->
+    <string name="search_kiosk_hint">Search Kiosk here........</string>
 </resources>

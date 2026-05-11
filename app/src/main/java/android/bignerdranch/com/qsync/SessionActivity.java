@@ -7,7 +7,6 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,16 +49,16 @@ public class SessionActivity extends AppCompatActivity {
         builder.append(qs).append(ync);
         tvLogo.setText(builder);
 
-        // Buttons for "New Session"
+        // Buttons for "New Session" - Navigate to FindKioskActivity
         TextView tvTopNewSession = findViewById(R.id.tv_top_new_session);
         MaterialButton btnCenterNewSession = findViewById(R.id.btn_center_new_session);
 
         tvTopNewSession.setOnClickListener(v -> {
-            Toast.makeText(this, "Create New Session Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SessionActivity.this, FindKioskActivity.class));
         });
 
         btnCenterNewSession.setOnClickListener(v -> {
-            Toast.makeText(this, "Create New Session Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SessionActivity.this, FindKioskActivity.class));
         });
 
         // Bottom Navigation
