@@ -86,10 +86,13 @@
 
         <!-- Item 1 -->
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kiosk_item_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_kiosk_item"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="16dp">
 
             <TextView
@@ -99,7 +102,7 @@
                 android:background="@drawable/bg_circle_grey"
                 android:gravity="center"
                 android:text="R"
-                android:textColor="@color/app_text_primary"
+                android:textColor="#1A1A1A"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +124,7 @@
                 android:id="@+id/tv_date_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:text="5/10/2026"
                 android:textColor="@color/app_text_secondary"
                 android:textSize="14sp"
@@ -131,9 +134,12 @@
 
         <!-- Item 2 -->
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kiosk_item_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_kiosk_item"
+            android:clickable="true"
+            android:focusable="true"
             android:padding="16dp">
 
             <TextView
@@ -143,7 +149,7 @@
                 android:background="@drawable/bg_circle_grey"
                 android:gravity="center"
                 android:text="J"
-                android:textColor="@color/app_text_primary"
+                android:textColor="#1A1A1A"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -165,7 +171,7 @@
                 android:id="@+id/tv_date_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:text="5/10/2026"
                 android:textColor="@color/app_text_secondary"
                 android:textSize="14sp"

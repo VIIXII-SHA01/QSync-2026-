@@ -1,14 +1,13 @@
 package android.bignerdranch.com.qsync;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,13 +15,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class FindKioskActivity extends AppCompatActivity {
+import com.google.android.material.button.MaterialButton;
+
+public class ViewKioskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_find_kiosk);
+        setContentView(R.layout.activity_view_kiosk);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -47,15 +48,10 @@ public class FindKioskActivity extends AppCompatActivity {
         ImageView ivBack = findViewById(R.id.iv_back);
         ivBack.setOnClickListener(v -> finish());
 
-        // Kiosk Item Clicks
-        View kioskItem1 = findViewById(R.id.kiosk_item_1);
-        kioskItem1.setOnClickListener(v -> {
-            startActivity(new Intent(FindKioskActivity.this, ViewKioskActivity.class));
-        });
-
-        View kioskItem2 = findViewById(R.id.kiosk_item_2);
-        kioskItem2.setOnClickListener(v -> {
-            startActivity(new Intent(FindKioskActivity.this, ViewKioskActivity.class));
+        // Fall in Line Button
+        MaterialButton btnFallInLine = findViewById(R.id.btn_fall_in_line);
+        btnFallInLine.setOnClickListener(v -> {
+            Toast.makeText(this, "Joined the queue!", Toast.LENGTH_SHORT).show();
         });
     }
 }
