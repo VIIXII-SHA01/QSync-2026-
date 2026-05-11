@@ -10,11 +10,31 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
-    // onCreate
+
+    private FirebaseAuth mAuth;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        if (mAuth.getCurrentUser() != null) {
+            goToSession();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null) {
+            goToSession();
+            return;
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         
@@ -37,5 +57,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
             startActivity(intent);
         });
+    }
+
+    private void goToSession() {
+        Intent intent = new Intent(MainActivity.this, SessionActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

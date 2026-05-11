@@ -33,4 +33,17 @@
     <string name="terms_service">"Terms of Service "</string>
     <string name="and_text"> and </string>
     <string name="privacy_policy">" Privacy Policy "</string>
+
+    <!-- Session Dashboard Strings -->
+    <string name="new_session">+ New Session</string>
+    <string name="new_session_no_plus">New Session</string>
+    <string name="no_sessions_yet">You do not have sessions yet</string>
+    <string name="nav_sessions">Sessions</string>
+    <string name="nav_kiosk">Kiosk</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Profile Strings -->
+    <string name="profile_title">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
 </resources>

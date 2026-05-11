@@ -133,13 +133,14 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_first_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/first_name_hint"
                 android:inputType="textPersonName"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -163,13 +164,14 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/last_name_hint"
                 android:inputType="textPersonName"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -190,13 +192,14 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_hint_reg"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -220,18 +223,19 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/phone_hint"
                 android:inputType="phone"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_gender"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -257,7 +261,7 @@
                 android:inputType="none"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -280,13 +284,14 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_hint_reg"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -309,13 +314,14 @@
             app:startIconTint="@color/brand_purple">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/confirm_password_hint"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:textColorHint="@color/app_text_secondary"
-                android:textSize="16sp" />
+                android:textSize="10sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
