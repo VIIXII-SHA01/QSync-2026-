@@ -77,7 +77,9 @@ public class ProfileActivity extends AppCompatActivity {
                 finish();
                 return true;
             } else if (id == R.id.nav_kiosk) {
-                Toast.makeText(this, "Kiosk Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, KioskActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
                 return true;
             } else if (id == R.id.nav_profile) {
                 return true;

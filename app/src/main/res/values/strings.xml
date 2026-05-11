@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">QSync</string>
-    <string name="q_letter">QS</string>
-    <string name="sync_text">ync</string>
+    <string name="q_letter">Q</string>
+    <string name="sync_text">Sync</string>
     <string name="app_description">Join virtual queues instantly.\nGet notified when it\'s your turn.\nNo more standing in line.</string>
     <string name="create_account">Create Account</string>
     <string name="or_text">or</string>
@@ -46,4 +46,8 @@
     <string name="profile_title">Profile</string>
     <string name="logout">Logout</string>
     <string name="logout_confirmation">Are you sure you want to logout?</string>
+
+    <!-- Kiosk Strings -->
+    <string name="create_kiosk">+ Create Kiosk</string>
+    <string name="kiosk_empty_state_text">You can create your own kiosk or join one if an host will add you to their kiosk</string>
 </resources>
