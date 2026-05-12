@@ -53,4 +53,16 @@
 
     <!-- Find Kiosk Strings -->
     <string name="search_kiosk_hint">Search Kiosk here........</string>
+
+    <!-- Add Kiosk Strings -->
+    <string name="add_kiosk_title">Add Kiosk</string>
+    <string name="kiosk_name_label">KIOSK NAME</string>
+    <string name="transaction_date_label">TRANSACTION DATE</string>
+    <string name="daily_limit_label">DAILY LIMIT</string>
+    <string name="description_label">DESCRIPTION</string>
+    <string name="save_kiosk">Save Kiosk</string>
+    <string name="kiosk_name_hint">Enter kiosk name</string>
+    <string name="select_date_hint">Select Date</string>
+    <string name="daily_limit_hint">Enter daily limit</string>
+    <string name="description_hint">Enter kiosk description</string>
 </resources>

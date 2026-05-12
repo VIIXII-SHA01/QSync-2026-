@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QSync">
         <activity
+            android:name=".AddKioskActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewKioskActivity"
             android:exported="false" />
         <activity

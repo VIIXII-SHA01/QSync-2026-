@@ -1,5 +1,6 @@
 package android.bignerdranch.com.qsync;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -9,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,12 +34,12 @@ public class KioskFragment extends Fragment {
         builder.append(qs).append(ync);
         tvLogo.setText(builder);
 
-        // Create Kiosk Buttons
+        // Create Kiosk Buttons - Navigate to AddKioskActivity
         TextView tvTopCreateKiosk = view.findViewById(R.id.tv_top_create_kiosk);
         MaterialButton btnCenterCreateKiosk = view.findViewById(R.id.btn_center_create_kiosk);
 
         View.OnClickListener onCreateKiosk = v -> {
-            Toast.makeText(getContext(), "Create Kiosk Clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), AddKioskActivity.class));
         };
 
         tvTopCreateKiosk.setOnClickListener(onCreateKiosk);
