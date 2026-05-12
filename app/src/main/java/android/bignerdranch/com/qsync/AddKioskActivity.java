@@ -18,19 +18,28 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class AddKioskActivity extends AppCompatActivity {
 
     private TextInputEditText etKioskName, etDate, etDailyLimit, etDescription;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_kiosk);
+
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -65,10 +74,44 @@ public class AddKioskActivity extends AppCompatActivity {
         // Save Button
         btnSave.setOnClickListener(v -> {
             if (validateInputs()) {
-                Toast.makeText(this, "Kiosk Created Successfully", Toast.LENGTH_SHORT).show();
-                finish();
+                saveKioskToFirestore();
             }
         });
+    }
+
+    private void saveKioskToFirestore() {
+        String userId = mAuth.getUid();
+        if (userId == null) {
+            Toast.makeText(this, "User not authenticated", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String name = etKioskName.getText().toString().trim();
+        String date = etDate.getText().toString().trim();
+        int dailyLimit = Integer.parseInt(etDailyLimit.getText().toString().trim());
+        String description = etDescription.getText().toString().trim();
+
+        Map<String, Object> kiosk = new HashMap<>();
+        kiosk.put("name", name);
+        kiosk.put("nameLowercase", name.toLowerCase());
+        kiosk.put("date", date);
+        kiosk.put("dailyLimit", dailyLimit);
+        kiosk.put("description", description);
+        kiosk.put("creatorId", userId);
+        kiosk.put("status", "OPEN");
+        kiosk.put("currentTransaction", 0);
+        kiosk.put("availableNumber", 1);
+        kiosk.put("createdAt", System.currentTimeMillis());
+
+        db.collection("kiosks")
+                .add(kiosk)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(AddKioskActivity.this, "Kiosk Created Successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(AddKioskActivity.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 
     private void showDatePicker() {

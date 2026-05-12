@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.recyclerview)
 
     // Firebase
     implementation(platform(libs.firebase.bom))

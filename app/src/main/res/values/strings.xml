@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QSync</string>
-    <string name="q_letter">Q</string>
-    <string name="sync_text">Sync</string>
+    <string name="q_letter">QS</string>
+    <string name="sync_text">ync</string>
     <string name="app_description">Join virtual queues instantly.\nGet notified when it\'s your turn.\nNo more standing in line.</string>
     <string name="create_account">Create Account</string>
     <string name="or_text">or</string>
@@ -65,4 +66,40 @@
     <string name="select_date_hint">Select Date</string>
     <string name="daily_limit_hint">Enter daily limit</string>
     <string name="description_hint">Enter kiosk description</string>
+
+    <!-- View Kiosk Strings -->
+    <string name="back_button">Back</string>
+    <string name="fall_in_line">Fall in Line</string>
+    <string name="tab_host">Host</string>
+    <string name="tab_clients">Clients</string>
+    <string name="tab_info">Info</string>
+    <string name="client_jd_name">John Doe</string>
+    <string name="client_jd_initial">JD</string>
+    <string name="client_as_name">Alice Smith</string>
+    <string name="client_as_initial">AS</string>
+    <string name="kiosk_status">Status</string>
+    <string name="status_open">Open</string>
+    <string name="description_header">Description</string>
+    <string name="kiosk_sample_description">This kiosk is for the RMMC Cashier transactions. Please fall in line to be served.</string>
+    <string name="add_new_host">Add New Host</string>
+    <string name="edit_kiosk_info">Edit Kiosk Information</string>
+    <string name="current_transaction_label">Current Transaction Number</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="search_user_hint">Search user by email...</string>
+    <string name="close">Close</string>
+    <string name="no_user_found">No user found with this email</string>
+    <string name="already_host">User is already a host</string>
+
+    <!-- Join Line Strings -->
+    <string name="label_date">Date: %1$s</string>
+    <string name="label_available_number">Available Number: %1$d</string>
+    <string name="label_daily_limit">Daily Limit: %1$d</string>
+    <string name="label_current_transaction">Current Transaction: %1$d</string>
+    <string name="label_status">Status: </string>
+    <string name="label_description">Description: %1$s</string>
+    <string name="toast_joined_queue">Successfully joined the queue!</string>
+
+    <!-- Entertain Client Strings -->
+    <string name="queue_number_label">Queue Number: #%1$d</string>
 </resources>

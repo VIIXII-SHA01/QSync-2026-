@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QSync">
         <activity
+            android:name=".EntertainClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JoinLineActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddKioskActivity"
             android:exported="false" />
         <activity

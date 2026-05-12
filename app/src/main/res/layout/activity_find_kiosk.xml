@@ -60,7 +60,9 @@
             android:textColorHint="@color/app_text_secondary"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/iv_search"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:importantForAutofill="no"
+            android:inputType="text" />
 
         <ImageView
             android:id="@+id/iv_search"
@@ -75,110 +77,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Kiosk List -->
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_find_kiosks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
-        android:orientation="vertical"
         android:paddingHorizontal="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_container">
-
-        <!-- Item 1 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/kiosk_item_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_kiosk_item"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tv_initial_1"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/bg_circle_grey"
-                android:gravity="center"
-                android:text="R"
-                android:textColor="#1A1A1A"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_title_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Ramon Magsaysay Memorial Colleges(Cashier)"
-                android:textColor="@color/app_text_secondary"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tv_initial_1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_date_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="5/10/2026"
-                android:textColor="@color/app_text_secondary"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/tv_title_1"
-                app:layout_constraintTop_toBottomOf="@id/tv_title_1" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- Item 2 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/kiosk_item_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_kiosk_item"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tv_initial_2"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/bg_circle_grey"
-                android:gravity="center"
-                android:text="J"
-                android:textColor="#1A1A1A"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_title_2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Jollibee Delivery"
-                android:textColor="@color/app_text_secondary"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tv_initial_2"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_date_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="5/10/2026"
-                android:textColor="@color/app_text_secondary"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/tv_title_2"
-                app:layout_constraintTop_toBottomOf="@id/tv_title_2" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/search_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
